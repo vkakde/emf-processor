@@ -11,22 +11,22 @@ The C++ application uses PostgreSQL's C interface (PGC) to process Extended-SQL 
 2. PostgresSQL 10 (with pgc)
 
 # Input file format
-2						                                // number of grouping variables
-cust, year					                        // gv0 variables
-1_sum_quant, 2_count_quant			            // gv1-n variables
-cust, year, 1_sum_quant, 2_count_quant		  // select/project variables
-1.cust = cust, 2.year = year			          // SUCH THAT predicates
+2						                                // number of grouping variables  
+cust, year					                        // gv0 variables  
+1_sum_quant, 2_count_quant			            // gv1-n variables  
+cust, year, 1_sum_quant, 2_count_quant		  // select/project variables  
+1.cust = cust, 2.year = year			          // SUCH THAT predicates  
 
 # Compile/link/run instructions
-1. PGC->C conversion:  
-$: ecpg generator.pgc
+1. PGC->C conversion:    
+$: ecpg generator.pgc  
 
-2. Link and run C to generate exe:
-$: gcc -c -I [postgres include] generator.c 
-[postgres include] ~= "C:\Program Files\PostgreSQL\10\include" on Windows
+2. Link and run C to generate exe:  
+$: gcc -c -I [postgres include] generator.c   
+[postgres include] ~= "C:\Program Files\PostgreSQL\10\include" on Windows  
 
-$: gcc -L [postgres lib] -lecpg generated.o -o generated.exe
-[postgres lib] ~= "C:\Program Files\PostgreSQL\10\lib" on Windows
+$: gcc -L [postgres lib] -lecpg generated.o -o generated.exe  
+[postgres lib] ~= "C:\Program Files\PostgreSQL\10\lib" on Windows  
 
-3. Run
-$: generated.exe
+3. Run  
+$: generated.exe  
