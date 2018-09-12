@@ -25,8 +25,8 @@ $: ecpg generator.pgc
 $: gcc -c -I [postgres include] generator.c   
 [postgres include] ~= "C:\Program Files\PostgreSQL\10\include" on Windows  
 
-$: gcc -L [postgres lib] -lecpg generated.o -o generated.exe  
-[postgres lib] ~= "C:\Program Files\PostgreSQL\10\lib" on Windows  
+    $: gcc -L [postgres lib] -lecpg generated.o -o generated.exe  
+    [postgres lib] ~= "C:\Program Files\PostgreSQL\10\lib" on Windows  
 
 3. Run  
 $: generated.exe  
