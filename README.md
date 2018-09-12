@@ -11,11 +11,11 @@ The C++ application uses PostgreSQL's C interface (PGC) to process Extended-SQL 
 2. PostgresSQL 10 (with pgc)
 
 # Input file format
-2						                                // number of grouping variables  
-cust, year					                        // gv0 variables  
-1_sum_quant, 2_count_quant			            // gv1-n variables  
-cust, year, 1_sum_quant, 2_count_quant		  // select/project variables  
-1.cust = cust, 2.year = year			          // SUCH THAT predicates  
+2 (count of grouping variables)    
+cust, year (gv0 variables)    
+1_sum_quant, 2_count_quant (gv1-n variables)    
+cust, year, 1_sum_quant, 2_count_quant (select/project variables)    
+1.cust = cust, 2.year = year (SUCH THAT predicates)    
 
 # Compile/link/run instructions
 1. PGC->C conversion:    
