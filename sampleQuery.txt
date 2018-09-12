@@ -1,0 +1,5 @@
+2
+prod
+1_sum_quant, 2_sum_quant
+prod, 1_sum_quant, 2_sum_quant
+1.prod = prod and 1.year = 1991, 2.prod = prod and 2.year = 1992
