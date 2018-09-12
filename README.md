@@ -30,3 +30,7 @@ $: gcc -c -I [postgres include] generator.c
 
 3. Run  
 $: generated.exe  
+
+# Note
+This application to configured to work on a fixed sales schema, which can be loaded by running "load_sales_table.sql" on your local PostgreSQL instance. A sample query "sampleQuery.txt" has been provided, which reads as -  
+"For each product, find the total sales of 1991 and 1992".
